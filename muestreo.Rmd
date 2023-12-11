@@ -1,0 +1,116 @@
+---
+title: "Muestreo"
+author: "Aida Lopez Jimenez"
+date: "2023-10-04"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Muestreo aleatorio simple
+
+Generar numero aleatorios para una muestra de 61 personas en una 
+Población de 73 alumnas/os del 5to semestre de la LEP BENV
+confiabilidad del 95% y 5% de error.
+X= Del 1 al 73, que corresponde a la población.
+side= 61, que corresponde a el tamaño de la muestra.
+
+
+en este link se calculó la muestra.
+<https://www.macorr.com/sample-size-calculator.htm> 
+
+
+
+```{r}
+sample(1:73, 61, replace=FALSE)
+```
+```{r}
+sample(1:73, 61, replace=FALSE)
+```
+
+```{r}
+sample(1:73, 61, replace=TRUE)
+```
+
+## Ejercicios
+
+1.1- Calcula el tamaño de muestra para una poblacion de 
+83 alumnas y alumnos que se encuentran en primer grado
+de la Licenciatura en Educación Primaria de la BENV.
+En el link calculé la muestra de 23 alumnas y alumnos, el resultado fue 68.
+
+#1.2.- Una vez que obtengas el tamaño de la muestra, 
+selecciona el número de lista de las personas que formaran
+parte de la muestra.
+
+```{r}
+sample(1:83, 68, replace=FALSE)
+```
+
+#1.3.- Crea un vector llamado muestra con los números de 
+lista de las personas que forman parte de la muestra.
+
+
+forma larga: copiar y pegar, después poner comas a cada número.
+```{r}
+muestra<-c(19,5,36,66,62,55,69,25,37,43,68,3,73,65,80,67,4,59,76,52,57,26,47,53,70,34,49,18,32,51,60,45,14,24,46,29, 72,44,2,22,6,63,82,13,33,81,61,75,40,64,28,20,56,8,21,78,71,9,12,30,35,42,58,50,77,23)
+```
+
+forma corta:
+```{r}
+muestra2<-sample(1:83, 68, replace=FALSE)
+muestra2
+```
+
+# Muestreo estratificado
+
+
+matricula de la escuela: 328
+Población: 
+Primero: 47
+Segundo: 58
+Tercero: 51
+Cuarto: 51
+Quinto: 61
+Sexto: 60
+
+1.1 Sacar el número de muestra de los estratos
+Calcula el tamaño de muestra para una poblacion de 
+328 alumnas y alumnos que se encuentran en la escuela primaria Lázaro Cárdenas del Río.
+En el link calculé la muestra de 47 alumnos/as del primer grado, el resultado fue 42.
+
+1.2.  Una vez que obtengas el tamaño de la muestra, 
+selecciona el número de lista de las personas que formaran
+parte de la muestra.
+
+```{r}
+primero<-sample(1:47, 42, replace=FALSE)
+primero
+```
+```{r}
+segundo<-sample(1:58, 51, replace=FALSE)
+segundo
+```
+```{r}
+tercero<-sample(1:51, 45, replace=FALSE)
+tercero
+```
+```{r}
+cuarto<-sample(1:51, 45, replace=FALSE)
+cuarto
+```
+```{r}
+quinto<-sample(1:61, 53, replace=FALSE)
+quinto
+```
+```{r}
+sexto<-sample(1:60, 52, replace=FALSE)
+sexto
+```
+
+
+
+
